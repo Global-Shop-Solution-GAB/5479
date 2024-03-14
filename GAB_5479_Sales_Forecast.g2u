@@ -1,0 +1,679 @@
+Program.Sub.ScreenSU.Start
+Gui.frmSalesForecast..Create(BaseForm)
+Gui.frmSalesForecast..Caption("Sales Forecast (ARC 5479)")
+Gui.frmSalesForecast..Size(12855,9405)
+Gui.frmSalesForecast..MinX(0)
+Gui.frmSalesForecast..MinY(0)
+Gui.frmSalesForecast..Position(0,0)
+Gui.frmSalesForecast..AlwaysOnTop(False)
+Gui.frmSalesForecast..FontName("Tahoma")
+Gui.frmSalesForecast..FontSize(8.25)
+Gui.frmSalesForecast..ControlBox(True)
+Gui.frmSalesForecast..MaxButton(True)
+Gui.frmSalesForecast..MinButton(True)
+Gui.frmSalesForecast..MousePointer(0)
+Gui.frmSalesForecast..Moveable(True)
+Gui.frmSalesForecast..Sizeable(True)
+Gui.frmSalesForecast..ShowInTaskBar(True)
+Gui.frmSalesForecast..TitleBar(True)
+Gui.frmSalesForecast..Event(UnLoad,frmSalesForecast_UnLoad)
+Gui.frmSalesForecast.GsGCSalesForecast.Create(GsGridControl)
+Gui.frmSalesForecast.GsGCSalesForecast.Enabled(True)
+Gui.frmSalesForecast.GsGCSalesForecast.Visible(True)
+Gui.frmSalesForecast.GsGCSalesForecast.Zorder(0)
+Gui.frmSalesForecast.GsGCSalesForecast.Size(12720,7995)
+Gui.frmSalesForecast.GsGCSalesForecast.Position(15,1110)
+Gui.frmSalesForecast.GsGCSalesForecast.Anchor(15)
+Gui.frmSalesForecast.GsGCSalesForecast.Event(CellValueChanged,GsGCSalesForecast_CellValueChanged)
+Gui.frmSalesForecast.lblImport.Create(Label,"Select or Drag/Drop File to Import (xls , xlsx)",True,3000,210,0,60,75,True,0,"Tahoma",8.25,,0)
+Gui.frmSalesForecast.lblImport.BorderStyle(0)
+Gui.frmSalesForecast.txtImport.Create(TextBox,"",True,3945,300,0,60,225,True,0,"Tahoma",8.25,16777215,1)
+Gui.frmSalesForecast.cmdFileLookup.Create(Button)
+Gui.frmSalesForecast.cmdFileLookup.Enabled(True)
+Gui.frmSalesForecast.cmdFileLookup.Visible(True)
+Gui.frmSalesForecast.cmdFileLookup.Zorder(0)
+Gui.frmSalesForecast.cmdFileLookup.Size(345,330)
+Gui.frmSalesForecast.cmdFileLookup.Position(4020,225)
+Gui.frmSalesForecast.cmdFileLookup.Caption("^")
+Gui.frmSalesForecast.cmdFileLookup.FontName("Tahoma")
+Gui.frmSalesForecast.cmdFileLookup.FontSize(8.25)
+Gui.frmSalesForecast.cmdFileLookup.Event(Click,cmdFileLookup_Click)
+Gui.frmSalesForecast.cmdSave.Create(Button)
+Gui.frmSalesForecast.cmdSave.Enabled(True)
+Gui.frmSalesForecast.cmdSave.Visible(False)
+Gui.frmSalesForecast.cmdSave.Zorder(0)
+Gui.frmSalesForecast.cmdSave.Size(795,345)
+Gui.frmSalesForecast.cmdSave.Position(11925,735)
+Gui.frmSalesForecast.cmdSave.Caption("Save")
+Gui.frmSalesForecast.cmdSave.FontName("Tahoma")
+Gui.frmSalesForecast.cmdSave.FontSize(8.25)
+Gui.frmSalesForecast.cmdSave.Event(Click,cmdSave_Click)
+Gui.frmSalesForecast.cmdSave.Anchor(9)
+Gui.frmSalesForecast.cmdImport.Create(Button)
+Gui.frmSalesForecast.cmdImport.Enabled(True)
+Gui.frmSalesForecast.cmdImport.Visible(True)
+Gui.frmSalesForecast.cmdImport.Zorder(0)
+Gui.frmSalesForecast.cmdImport.Size(705,345)
+Gui.frmSalesForecast.cmdImport.Position(4395,735)
+Gui.frmSalesForecast.cmdImport.Caption("Import")
+Gui.frmSalesForecast.cmdImport.FontName("Tahoma")
+Gui.frmSalesForecast.cmdImport.FontSize(8.25)
+Gui.frmSalesForecast.cmdImport.Event(Click,cmdImport_Click)
+Gui.frmSalesForecast.cboCustomer.Create(ComboBox)
+Gui.frmSalesForecast.cboCustomer.Enabled(True)
+Gui.frmSalesForecast.cboCustomer.Visible(True)
+Gui.frmSalesForecast.cboCustomer.Zorder(0)
+Gui.frmSalesForecast.cboCustomer.Size(3945,300)
+Gui.frmSalesForecast.cboCustomer.Position(60,750)
+Gui.frmSalesForecast.cboCustomer.FontName("Tahoma")
+Gui.frmSalesForecast.cboCustomer.FontSize(8.25)
+Gui.frmSalesForecast.lblCustomer.Create(Label,"Select Customer for Import:",True,3000,210,0,60,600,True,0,"Tahoma",8.25,,0)
+Gui.frmSalesForecast.lblCustomer.BorderStyle(0)
+Gui.frmSalesForecast.cmdCustomerLookup.Create(Button)
+Gui.frmSalesForecast.cmdCustomerLookup.Enabled(True)
+Gui.frmSalesForecast.cmdCustomerLookup.Visible(True)
+Gui.frmSalesForecast.cmdCustomerLookup.Zorder(0)
+Gui.frmSalesForecast.cmdCustomerLookup.Size(345,330)
+Gui.frmSalesForecast.cmdCustomerLookup.Position(4020,750)
+Gui.frmSalesForecast.cmdCustomerLookup.Caption("^")
+Gui.frmSalesForecast.cmdCustomerLookup.FontName("Tahoma")
+Gui.frmSalesForecast.cmdCustomerLookup.FontSize(8.25)
+Gui.frmSalesForecast.cmdCustomerLookup.Event(Click,cmdCustomerLookup_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.bLoadData.Declare
+	V.Global.bDataChanged.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sIcon.Declare
+	
+	F.ODBC.Connection!con.OpenCompanyConnection
+	
+	F.Intrinsic.String.Build("{0}\GSS2.ico",V.Caller.GasDir,V.Local.sIcon)
+	Gui.frmSalesForecast..Icon(V.Local.sIcon)
+	
+	Gui.frmSalesForecast.txtImport.Event(DRAGDROPFILE,DragDrop)
+	
+	Gui.frmSalesForecast..Show
+	Gui.frmSalesForecast..Size(15000,9405)
+	F.Intrinsic.Control.CallSub(SetContextMenus)
+	F.Intrinsic.Control.CallSub(LoadCombobox)
+	F.Intrinsic.Control.CallSub(LoadSalesForecast)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.frmSalesForecast_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iRet.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bDataChanged)
+		F.Intrinsic.UI.Msgbox("Save Changes?","Save",4,V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet,=,6)
+			Gui.frmSalesForecast.cmdSave.SetFocus
+			F.Intrinsic.Control.CallSub(cmdSave_Click)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Global.bLoadData)
+		F.Intrinsic.Control.CallSub(Serialize)
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.End
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmSalesForecast_UnLoad.End
+
+Program.Sub.SetContextMenus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	Gui.frmSalesForecast..ContextMenuCreate("ctxMenu")
+	Gui.frmSalesForecast.GsGCSalesForecast.ContextMenuAttach("ctxMenu")
+'	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","SelAll",0,"Select All")
+'	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","DeselAll",0,"Deselect All")
+'	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","Exp",3)
+'	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","CreateSOs",0,"Create Sales Order(s)")
+'	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","Exp",3)
+	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","Refresh",0,"Refresh")
+	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","Export",0,"Export")
+	Gui.frmSalesForecast..ContextMenuAddItem("ctxMenu","ResetColumns",0,"Reset Columns")
+	Gui.frmSalesForecast..ContextMenuSetItemEventHandler("ctxMenu","SelAll","MenuClickEvents")
+	Gui.frmSalesForecast..ContextMenuSetItemEventHandler("ctxMenu","DeselAll","MenuClickEvents")
+	Gui.frmSalesForecast..ContextMenuSetItemEventHandler("ctxMenu","Refresh","LoadSalesForecast")
+	Gui.frmSalesForecast..ContextMenuSetItemEventHandler("ctxMenu","Export","MenuClickEvents")
+	Gui.frmSalesForecast..ContextMenuSetItemEventHandler("ctxMenu","ResetColumns","MenuClickEvents")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenus.End
+
+Program.Sub.MenuClickEvents.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sFileExport.Declare
+	V.Local.sMsg.Declare
+	V.Local.sExt.Declare
+	V.Local.bExcel.Declare
+	V.Local.bFileLocked.Declare
+
+	F.Intrinsic.Control.SelectCase(V.Args.ItemName)
+		F.Intrinsic.Control.Case("SELALL")
+			F.Data.DataTable.SetValue("dtSalesForecast",-1,"SEL",True)
+			
+		F.Intrinsic.Control.Case("DESELALL")
+			F.Data.DataTable.SetValue("dtSalesForecast",-1,"SEL",False)
+		
+		F.Intrinsic.Control.Case("CREATESOS")
+			'Logic here to use ORDUPL.lib
+		
+		F.Intrinsic.Control.Case("EXPORT")
+			F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+			F.Intrinsic.Control.If(V.Local.bExcel)
+				V.Local.sExt.Set("xlsx")
+			F.Intrinsic.Control.Else
+				V.Local.sExt.Set("csv")
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.String.Build("{0}\GAB_5479_Sales_Forecast.{1}",V.Caller.LocalGssTempDir,V.Local.sExt,V.Local.sFileExport)
+			F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+			F.Intrinsic.Control.If(V.Local.bFileLocked)
+				F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+				F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+			F.Intrinsic.Control.Else
+				Gui.frmSalesForecast.GsGCSalesForecast.Export(V.Local.sFileExport,V.Local.sExt)
+				F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Case("RESETCOLUMNS")
+			V.Global.bLoadData.Set(False)
+			F.Global.Registry.AddValue(v.Caller.User,v.Caller.CompanyCode,"gvSalesForecast",5479,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+			F.Intrinsic.Control.CallSub(LoadSalesForecast)
+			
+	F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickEvents.End
+
+Program.Sub.LoadCombobox.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Data.DataTable.CreateFromSQL("dtCustomer","con","SELECT CUSTOMER, RTRIM(NAME_CUSTOMER) AS NAME_CUSTOMER FROM V_CUSTOMER_MASTER ORDER BY NAME_CUSTOMER;",True)
+	Gui.frmSalesForecast.cboCustomer.AddItems("DataTable","dtCustomer","CUSTOMER","NAME_CUSTOMER")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadCombobox.End
+
+Program.Sub.DragDrop.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sFile.Declare
+	V.Local.sExt.Declare
+	
+	F.Intrinsic.String.Split(V.Args.Files,"*!*",V.Local.sFile)
+	V.Local.sFile.Set(V.Local.sFile(0))
+	'Check file type
+	F.Intrinsic.String.Split(V.Local.sFile,".",V.Local.sExt)
+	F.Intrinsic.Control.If(V.Local.sExt(V.Local.sExt.UBound),=,"xlsx",OR,V.Local.sExt(V.Local.sExt.UBound),=,"xls")
+		Gui.frmSalesForecast.txtImport.Text(V.Args.Files)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Please select an Excel (xls,xlsx) file.","File check")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.DragDrop.End
+
+Program.Sub.cmdFileLookup_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.bRet.Declare
+	V.Local.sFile.Declare
+	V.Local.sExt.Declare
+	
+	'Open File Browser and Save File as variable sFile
+	F.Intrinsic.UI.ShowOpenFileDialog("","*.xlsx","C:\",V.Local.sFile)
+	
+	'End Program is CANCEL is selected from the file browser
+	F.Intrinsic.Control.If(V.Local.sFile.IsNotCancel)
+		'Check file type
+		Gui.frmSalesForecast.txtImport.Text(V.Local.sFile)
+		F.Intrinsic.String.Split(V.Local.sFile,".",V.Local.sExt)
+		F.Intrinsic.Control.If(V.Local.sExt(V.Local.sExt.UBound),=,"xlsx",OR,V.Local.sExt(V.Local.sExt.UBound),=,"xls")
+			'Do Nothing
+		F.Intrinsic.Control.Else
+			Gui.frmSalesForecast.txtImport.Text("")
+			F.Intrinsic.UI.Msgbox("Please select an Excel (xls,xlsx) file.","File check")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdFileLookup_Click.End
+
+Program.Sub.cmdCustomerLookup_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sRet.Declare
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(1)
+	F.Intrinsic.UI.BrowserFromDataTable("Select a Customer","dtCustomer","Customer No*!*Customer Name","500*!*1000",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.frmSalesForecast.cboCustomer.Text(V.Local.sRet(1))
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdCustomerLookup_Click.End
+
+Program.Sub.cmdImport_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sRet.Declare
+	V.Local.iRet.Declare
+	V.Local.iCnt.Declare
+	V.Local.iRows.Declare
+	V.Local.sMsg.Declare
+	V.Local.sSQL.Declare
+	V.Local.sFile.Declare
+	V.Local.sCustomer.Declare
+	V.Local.sCustNo.Declare
+
+	V.Local.sFile.Set(V.Screen.frmSalesForecast!txtImport.Text)
+	F.Intrinsic.Control.If(V.Local.sFile.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select an Excel file first.","File Missing")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	V.Local.sCustomer.Set(V.Screen.frmSalesForecast!cboCustomer.Text)
+	F.Intrinsic.Control.If(V.Local.sCustomer.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a Customer first.","Customer Missing")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'Warning Message before importing
+	F.Intrinsic.UI.Msgbox("Importing new data will replace the currently loaded data for the selected customer. Continue?","Warning",4,V.Local.iRet)
+	F.Intrinsic.Control.If(V.Local.iRet,=,7)
+		Gui.frmSalesForecast.txtImport.Text("")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.Automation.MSExcel.CreateAppObject("MSExcel")
+	F.Automation.MSExcel.OpenWorkbook("MSExcel","ImportWB",V.Local.sFile)
+	F.Automation.MSExcel.OpenWorksheet("ImportWB","ImportWS",1)
+
+	F.Intrinsic.UI.InvokeWaitDialog("Starting Import Process","Sales Forecast Import: ")
+	F.Intrinsic.UI.ChangeWaitStatus("Importing data....",0)
+	
+	V.Local.sCustNo.Set(V.Screen.frmSalesForecast!cboCustomer.ItemData)
+	F.Intrinsic.String.Build("DELETE FROM GAB_5479_SALES_FORE WHERE CUSTOMER = '{0}';",V.Local.sCustNo,V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	
+	F.Automation.MSExcel.RowCount("ImportWS",V.Local.iRows)
+	F.Intrinsic.Control.For(V.Local.iCnt,2,V.Local.iRows,1)
+		F.Intrinsic.UI.ChangeWaitStatus("Importing data....",V.Local.iCnt,0,V.Local.iRows)
+		F.Automation.MSExcel.ReadRow("ImportWS",V.Local.iCnt,1,5,V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet(0).Trim,<>,"")
+			F.Intrinsic.Control.CallSub(GetPricing,"Customer",V.Local.sCustNo,"Part",V.Local.sRet(0),"Loc","")
+			F.Data.DataTable.CreateFromSQL("dtImport","con","SELECT * FROM GAB_5479_SALES_FORE WHERE CUSTOMER = '';")
+			F.Data.DataTable.AddRow("dtImport","SFID",0,"CUSTOMER",V.Local.sCustNo,"PART",V.Local.sRet(0),"LOC","","CUSTOMER_PO",V.Local.sRet(2),"SHIP_DATE",V.Local.sRet(3),"QUANTITY",V.Local.sRet(4),"PRICE",V.Args.Price)
+			F.Data.DataTable.SaveToDB("dtImport","con","GAB_5479_SALES_FORE","SFID")
+			F.Data.DataTable.Close("dtImport")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	'Close Excel
+	F.Automation.MSExcel.DestroyAllObjects("MSExcel","ImportWB","ImportWS")
+	
+	'Remove blank records
+	F.ODBC.Connection!con.Execute("DELETE FROM GAB_5479_SALES_FORE WHERE PART = '';")
+
+	F.Intrinsic.UI.ChangeWaitStatus("Import Complete.",100)
+	F.Intrinsic.UI.CloseWaitDialog
+	
+	F.Intrinsic.Control.CallSub(LoadSalesForecast)
+	Gui.frmSalesForecast.txtImport.Text("")
+	Gui.frmSalesForecast.cboCustomer.Text("")
+	
+	F.Intrinsic.Control.Catch
+		F.Automation.MSExcel.DestroyAllObjects("MSExcel","ImportWB","ImportWS")
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdImport_Click.End
+
+Program.Sub.GetPricing.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.fPrice.Declare
+	
+	F.Intrinsic.String.Build("SELECT PRICE FROM V_OE_C_PART_PRICE WHERE CUSTOMER = '{0}' AND PART = '{1}' AND LOCATION = '{2}';",V.Args.Customer,V.Args.Part,V.Args.Loc,V.Local.sSQL)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.fPrice)
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.String.Build("SELECT AMT_PRICE FROM V_INVENTORY_MSTR WHERE PART = '{0}' AND LOCATION = '{1}';",V.Args.Part,V.Args.Loc,V.Local.sSQL)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.fPrice)
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+			V.Local.fPrice.Set(0)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Variable.AddRV("Price",V.Local.fPrice)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GetPricing.End
+
+Program.Sub.LoadSalesForecast.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.DataTable.dtSalesForecast.Exists)
+		F.Data.DataTable.Close("dtSalesForecast")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.UI.InvokeWaitDialog("Loading Grid View","Sales Forecast: ")
+	F.Intrinsic.UI.ChangeWaitStatus("Loading Grid View....")
+	
+	F.Intrinsic.Control.If(V.Global.bLoadData)
+		F.Intrinsic.Control.CallSub(Serialize)
+	F.Intrinsic.Control.EndIf
+	
+	V.Global.bLoadData.Set(True)
+	F.Data.DataTable.CreateFromSQL("dtSalesForecast","con","SELECT GAB_5479_SALES_FORE.SFID, GAB_5479_SALES_FORE.CUSTOMER, V_CUSTOMER_MASTER.NAME_CUSTOMER, GAB_5479_SALES_FORE.PART, GAB_5479_SALES_FORE.LOC, V_INVENTORY_MSTR.DESCRIPTION, GAB_5479_SALES_FORE.CUSTOMER_PO, GAB_5479_SALES_FORE.SHIP_DATE, GAB_5479_SALES_FORE.QUANTITY, GAB_5479_SALES_FORE.PRICE, GAB_5479_SALES_FORE.QUANTITY * GAB_5479_SALES_FORE.PRICE AS EXTENSION FROM GAB_5479_SALES_FORE LEFT JOIN V_CUSTOMER_MASTER ON GAB_5479_SALES_FORE.CUSTOMER = V_CUSTOMER_MASTER.CUSTOMER LEFT JOIN V_INVENTORY_MSTR ON GAB_5479_SALES_FORE.PART = V_INVENTORY_MSTR.PART AND GAB_5479_SALES_FORE.LOC = V_INVENTORY_MSTR.LOCATION ORDER BY V_CUSTOMER_MASTER.NAME_CUSTOMER, GAB_5479_SALES_FORE.PART, GAB_5479_SALES_FORE.LOC, GAB_5479_SALES_FORE.SHIP_DATE;",True)
+	'F.Data.DataTable.CreateFromSQL("dtSalesForecast","con","SELECT CAST(0 AS BIT) AS SEL, GAB_5479_SALES_FORE.SFID, GAB_5479_SALES_FORE.CUSTOMER, V_CUSTOMER_MASTER.NAME_CUSTOMER, GAB_5479_SALES_FORE.PART, GAB_5479_SALES_FORE.LOC, V_INVENTORY_MSTR.DESCRIPTION, GAB_5479_SALES_FORE.CUSTOMER_PO, GAB_5479_SALES_FORE.SHIP_DATE, GAB_5479_SALES_FORE.QUANTITY, GAB_5479_SALES_FORE.PRICE, GAB_5479_SALES_FORE.QUANTITY * GAB_5479_SALES_FORE.PRICE AS EXTENSION FROM GAB_5479_SALES_FORE LEFT JOIN V_CUSTOMER_MASTER ON GAB_5479_SALES_FORE.CUSTOMER = V_CUSTOMER_MASTER.CUSTOMER LEFT JOIN V_INVENTORY_MSTR ON GAB_5479_SALES_FORE.PART = V_INVENTORY_MSTR.PART AND GAB_5479_SALES_FORE.LOC = V_INVENTORY_MSTR.LOCATION ORDER BY V_CUSTOMER_MASTER.NAME_CUSTOMER, GAB_5479_SALES_FORE.PART, GAB_5479_SALES_FORE.LOC, GAB_5479_SALES_FORE.SHIP_DATE;",True)
+	
+	F.Intrinsic.Control.CallSub(LoadSalesForecastGV)
+	F.Intrinsic.Control.CallSub(Deserialize)
+	F.Intrinsic.UI.CloseWaitDialog
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadSalesForecast.End
+
+Program.Sub.LoadSalesForecastGV.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.iCnt.Declare
+	V.Local.sColumn.Declare
+	
+	Gui.frmSalesForecast.GsGCSalesForecast.SuspendLayout()
+	Gui.frmSalesForecast.GsGCSalesForecast.AddGridviewFromDataTable("gvSalesForecast","dtSalesForecast")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetGridviewProperty("gvSalesForecast","MultiSelect",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetGridviewProperty("gvSalesForecast","AllowSort",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetGridviewProperty("gvSalesForecast","AllowFilter",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetGridviewProperty("gvSalesForecast","ShowDetailTabs",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetGridviewProperty("gvSalesForecast","ShowGroupPanel",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetGridviewProperty("gvSalesForecast","EnableAppearanceOddRow",True)
+	
+	'Loop through columns names by using the V.DataTable.dtName.FieldNames
+	F.Intrinsic.String.Split(V.DataTable.dtSalesForecast.FieldNames,"*!*",V.Local.sColumn)
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sColumn.UBound,1)
+		Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn(V.Local.iCnt),"HeaderFontBold",True)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+
+'	'SEL
+'	V.Local.sColumn.Set("SEL")
+'	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Select")
+'	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","45")
+'	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",True)
+'	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",False)
+'	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Center")
+'	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Center")
+	
+	'SFID
+	V.Local.sColumn.Set("SFID")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Visible",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption",V.Local.sColumn)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","45")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Center")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Center")
+	
+	'CUSTOMER
+	V.Local.sColumn.Set("CUSTOMER")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Visible",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Cust No")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","65")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Center")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Center")
+	
+	'NAME_CUSTOMER
+	V.Local.sColumn.Set("NAME_CUSTOMER")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Customer Name")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","150")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Left")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Left")
+	Gui.frmSalesForecast.GsGCSalesForecast.AddSummaryItem("gvSalesForecast",V.Local.sColumn,V.Local.sColumn, "COUNT", "Count: ", "", n0)
+	
+	'PART
+	V.Local.sColumn.Set("PART")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Part")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","115")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Left")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Left")
+	
+	'LOC
+	V.Local.sColumn.Set("LOC")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Visible",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Loc")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","55")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Center")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Center")
+	
+	'DESCRIPTION
+	V.Local.sColumn.Set("DESCRIPTION")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Description")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","150")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Left")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Left")
+	
+	'CUSTOMER_PO
+	V.Local.sColumn.Set("CUSTOMER_PO")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Customer PO")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","115")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Left")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Left")
+	
+	'SHIP_DATE
+	V.Local.sColumn.Set("SHIP_DATE")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Ship Date")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","85")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment","Center")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Center")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"DisplayCustomDateTime","d")
+	
+	'QUANTITY
+	V.Local.sColumn.Set("QUANTITY")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Quantity")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","95")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment", "Far")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Far")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"DisplayCustomNumeric",n2)
+	Gui.frmSalesForecast.GsGCSalesForecast.AddSummaryItem("gvSalesForecast",V.Local.sColumn,V.Local.sColumn, "SUM", "Tot Qty: ", "", n2)
+	
+	'PRICE
+	V.Local.sColumn.Set("PRICE")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Price")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","95")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment", "Far")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Far")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"DisplayCustomNumeric",n2)
+	
+	'EXTENSION
+	V.Local.sColumn.Set("EXTENSION")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"Caption","Extension")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"MinWidth","95")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"AllowEdit",False)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"ReadOnly",True)
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"HeaderHAlignment", "Far")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"CellHAlignment","Far")
+	Gui.frmSalesForecast.GsGCSalesForecast.SetColumnProperty("gvSalesForecast",V.Local.sColumn,"DisplayCustomNumeric",n2)
+	Gui.frmSalesForecast.GsGCSalesForecast.AddSummaryItem("gvSalesForecast",V.Local.sColumn,V.Local.sColumn, "SUM", "Tot Ext: ", "", n2)
+	
+	Gui.frmSalesForecast.GsGCSalesForecast.ResumeLayout()
+	Gui.frmSalesForecast.GsGCSalesForecast.MainView("gvSalesForecast")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadSalesForecastGV.End
+
+Program.Sub.GsGCSalesForecast_CellValueChanged.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sKey.Declare
+	V.Local.fExtension.Declare
+
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.Case("NAME_CUSTOMER")
+			F.Data.Dictionary.ReturnKeyFromValue("dicCustomer",V.Args.Value,V.Local.sKey)
+			F.Data.DataTable.SetValue("dtSalesForecast",V.Args.RowIndex,"CUSTOMER",V.Local.sKey)
+			'Get Pricing
+			F.Intrinsic.Control.CallSub(GetPricing,"Customer",V.DataTable.dtSalesForecast(V.Args.RowIndex).CUSTOMER!FieldVal,"Part",V.DataTable.dtSalesForecast(V.Args.RowIndex).PART!FieldVal,"Loc",V.DataTable.dtSalesForecast(V.Args.RowIndex).LOC!FieldVal)
+			F.Intrinsic.Math.Mult(V.DataTable.dtSalesForecast(V.Args.RowIndex).CUSTOMER!FieldVal,V.Args.Price,V.Local.fExtension)
+			F.Data.DataTable.SetValue("dtSalesForecast",V.Args.RowIndex,"PRICE",V.Args.Price,"EXTENSION",V.Local.fExtension)
+			V.Global.bDataChanged.Set(True)
+	F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCSalesForecast_CellValueChanged.End
+
+Program.Sub.cmdSave_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+'	F.Data.DataTable.RemoveColumn("dtSalesForecast","SEL")
+	F.Data.DataTable.RemoveColumn("dtSalesForecast","NAME_CUSTOMER")
+	F.Data.DataTable.RemoveColumn("dtSalesForecast","DESCRIPTION")
+	F.Data.DataTable.RemoveColumn("dtSalesForecast","EXTENSION")
+	F.Data.DataTable.SaveToDB("dtSalesForecast","con","GAB_5479_SALES_FORE","SFID")
+	F.Intrinsic.Control.CallSub(LoadSalesForecast)
+	V.Global.bDataChanged.Set(False)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.Serialize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSerialize.Declare
+
+	Gui.frmSalesForecast.GsGCSalesForecast.Serialize("gvSalesForecast",V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"gvSalesForecast",5479,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSerialize.Declare
+	
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvSalesForecast",5479,1000,6,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		Gui.frmSalesForecast.GsGCSalesForecast.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$avaldez$}$20190326132550490$}$CBUu04veoT9NExad5Mkb3ylWEN0INN4A3ptyEUDvfBw1qEPqf50OmOJ4VetDMWsuqeY6Qnn9lZ4=
+Program.Sub.Comments.End
